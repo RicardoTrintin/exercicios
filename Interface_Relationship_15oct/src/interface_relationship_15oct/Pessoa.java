@@ -10,5 +10,8 @@ package interface_relationship_15oct;
  * @author joaojrmachado
  */
 public class Pessoa {
-    
+    protected String first_name;
+    protected String last_name;
+    protected String cpf;
+    protected int idade;
 }
