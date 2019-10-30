@@ -15,6 +15,12 @@ public class Automovel implements Tipo {
     protected String cor;
     protected String modelo;
     
+    public void imprimir () {
+        System.out.println("Placa: " + this.placa);
+        System.out.println("Cor: " + this.cor);
+        System.out.println("Modelo: " + this.modelo);
+    }
+    
     protected Instrutor inst;
 
     public String getPlaca() {

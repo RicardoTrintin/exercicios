@@ -12,6 +12,19 @@ package interface_relationship_15oct;
 public class Onibus extends Automovel{
     private int numLugares;
 
+    public Onibus(String cor, String placa, int numLugares, String modelo){
+        this.cor = cor;
+        this.placa = placa;
+        this.modelo = modelo;
+        this.numLugares = numLugares;
+    }
+    
+    @Override
+    public void imprimir (){
+        super.imprimir();
+        System.out.println("Numero de lugares: " + numLugares);
+    }
+    
     public int getNumLugares() {
         return numLugares;
     }

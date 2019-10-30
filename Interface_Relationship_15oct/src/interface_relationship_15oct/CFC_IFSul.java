@@ -12,10 +12,12 @@ package interface_relationship_15oct;
 public class CFC_IFSul {
     public static void main(String[] args){
         
-       Carro c1 = new Carro();
-        
+        Carro c1 = new Carro("Azul", "IIAB0", 4, "FIAT UNO");
+        Onibus o1 = new Onibus("Branco", "OHG87HH", 32, "Volvo");
        
-               
+        c1.imprimir();
+        o1.imprimir();
+        
     }
     
 }
