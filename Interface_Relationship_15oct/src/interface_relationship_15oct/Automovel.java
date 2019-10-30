@@ -9,7 +9,8 @@ package interface_relationship_15oct;
  *
  * @author joaojrmachado
  */
-public class Automovel implements Tipo{
+public class Automovel implements Tipo {
+    
     protected String placa;
     protected String cor;
     protected String modelo;

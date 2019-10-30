@@ -12,6 +12,10 @@ package interface_relationship_15oct;
 public class Carro extends Automovel{
     private int numPortas;
 
+    public Carro(){
+        
+    }
+    
     public int getNumPortas() {
         return numPortas;
     }

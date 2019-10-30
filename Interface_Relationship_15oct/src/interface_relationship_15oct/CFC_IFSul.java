@@ -12,6 +12,10 @@ package interface_relationship_15oct;
 public class CFC_IFSul {
     public static void main(String[] args){
         
+       Carro c1 = new Carro();
+        
+       
+               
     }
     
 }
