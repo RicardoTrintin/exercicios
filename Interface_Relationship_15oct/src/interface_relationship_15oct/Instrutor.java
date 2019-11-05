@@ -33,6 +33,7 @@ public class Instrutor extends Pessoa {
         super.imprimir();
         System.out.println("ID: " + id);
         System.out.println("Modelo carro" + aut.modelo);
+        System.out.println(" ");
     }
     
     

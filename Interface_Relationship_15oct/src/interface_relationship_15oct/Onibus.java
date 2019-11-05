@@ -25,6 +25,7 @@ public class Onibus extends Automovel{
         System.out.println(" ");
         super.imprimir();
         System.out.println("Numero de lugares: " + numLugares);
+        System.out.println(" ");
     }
     
     public int getNumLugares() {
