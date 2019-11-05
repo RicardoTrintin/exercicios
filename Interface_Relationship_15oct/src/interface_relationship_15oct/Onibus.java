@@ -21,6 +21,8 @@ public class Onibus extends Automovel{
     
     @Override
     public void imprimir (){
+        System.out.println("ONIBUS");
+        System.out.println(" ");
         super.imprimir();
         System.out.println("Numero de lugares: " + numLugares);
     }

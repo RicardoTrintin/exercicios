@@ -25,6 +25,8 @@ public class Carro extends Automovel{
     
     @Override
     public void imprimir (){
+        System.out.println("CARRO");
+        System.out.println(" ");
         super.imprimir();
         System.out.println("Numero de portas: " + numPortas);
         System.out.println(" ");
