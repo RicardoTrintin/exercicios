@@ -12,6 +12,24 @@ package interface_relationship_15oct;
 public class Atendente extends Pessoa{
     private String turno;
 
+    
+    public Atendente(String turno, String first_name, String last_name, String cpf, int idade){
+        this.turno = turno;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.cpf = cpf;
+        this.idade = idade;
+    }
+    
+    @Override
+    public void imprimir (){
+        System.out.println("Instrutor");
+        System.out.println(" ");
+        super.imprimir();
+        System.out.println("Turno: " + turno);
+    }
+    
+    
     public String getTurno() {
         return turno;
     }

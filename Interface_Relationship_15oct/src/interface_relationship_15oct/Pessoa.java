@@ -14,4 +14,13 @@ public abstract class Pessoa {
     protected String last_name;
     protected String cpf;
     protected int idade;
+    
+    
+    public void imprimir () {
+        System.out.println("Primeiro nome: " + this.first_name);
+        System.out.println("Ultimo nome: " + this.last_name);
+        System.out.println("CPF: " + this.cpf);
+        System.out.println("Idade: " + this.idade);
+    }
+    
 }

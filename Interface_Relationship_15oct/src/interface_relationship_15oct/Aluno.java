@@ -12,6 +12,25 @@ package interface_relationship_15oct;
 public class Aluno extends Pessoa{
     private char categoriaHabilitacao;
 
+    
+    public Aluno(char categoriaHabilitacao, String first_name, String last_name, String cpf, int idade){
+        this.categoriaHabilitacao = categoriaHabilitacao;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.cpf = cpf;
+        this.idade = idade;
+    }
+    
+    
+    @Override
+    public void imprimir (){
+        System.out.println("Instrutor");
+        System.out.println(" ");
+        super.imprimir();
+        System.out.println("Categoria Habilitação: " + categoriaHabilitacao);
+    }
+    
+    
     public char getCategoriaHabilitacao() {
         return categoriaHabilitacao;
     }

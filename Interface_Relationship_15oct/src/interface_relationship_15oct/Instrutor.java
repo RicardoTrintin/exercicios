@@ -1,18 +1,41 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package interface_relationship_15oct;
+import java.util.Random;
 
 /**
  *
  * @author joaojrmachado
  */
-public class Instrutor extends Pessoa{
+public class Instrutor extends Pessoa {
     private int id;
     private Automovel aut;
-
+    
+    Random randon = new Random();
+    
+    public Instrutor(Automovel carro){
+        this.id = randon.nextInt();
+        this.aut = carro;
+    }
+    
+    public Instrutor(int id, Automovel aut, String first_name, String last_name, String cpf, int idade){
+        this.id = id;
+        this.aut = aut;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.cpf = cpf;
+        this.idade = idade;
+    }
+    
+    
+    @Override
+    public void imprimir (){
+        System.out.println("Instrutor");
+        System.out.println(" ");
+        super.imprimir();
+        System.out.println("ID: " + id);
+        System.out.println("Modelo carro" + aut.modelo);
+    }
+    
+    
     public Automovel getAut() {
         return aut;
     }
