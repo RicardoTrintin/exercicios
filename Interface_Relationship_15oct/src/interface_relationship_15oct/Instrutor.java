@@ -16,8 +16,8 @@ public class Instrutor extends Pessoa {
         this.aut = carro;
     }
     
-    public Instrutor(int id, Automovel aut, String first_name, String last_name, String cpf, int idade){
-        this.id = id;
+    public Instrutor(Automovel aut, String first_name, String last_name, String cpf, int idade){
+        this.id = randon.nextInt();
         this.aut = aut;
         this.first_name = first_name;
         this.last_name = last_name;
