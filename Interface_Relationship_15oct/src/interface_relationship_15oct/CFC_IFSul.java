@@ -117,7 +117,7 @@ public class CFC_IFSul {
                     String last_name = "";
                     String cpf = "";
                     int idade = 0;
-                    String carro = "";
+                    String placa = "";
                     
                     System.out.print("Digite o primeiro nome: ");
                     first_name = read.next();
@@ -127,11 +127,17 @@ public class CFC_IFSul {
                     cpf = read.next();
                     System.out.print("Digite a idade: ");
                     idade = read.nextInt();
-                    System.out.println("Digite o carro para este instrutor: ");
-                    carro = read.next();
-                    System.out.println(vectorAut.contains(carro));
-                    vectorAut.get(0).modelo.contains(carro);
-//                    Iterator value = vectorAut.iterator(); 
+                    System.out.println("Digite a placa do carro para este instrutor: ");
+                    placa = read.next();
+                    //int i = 0;
+                    for (int i = 0; i < vectorAut.size(); i++){                    
+                        String placa1vect = vectorAut.get(i).placa;
+                        if (placa1vect.equals(placa)){
+                            System.out.println("tem");
+                        }
+                    }
+                    //System.out.println(vectorAut.contains(placa));
+//                    Iterator value = vectorAut.iterator();
 //                    while (value.hasNext()){
 //                        
 //                        
