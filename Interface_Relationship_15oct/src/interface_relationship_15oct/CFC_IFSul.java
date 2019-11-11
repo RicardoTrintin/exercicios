@@ -102,17 +102,16 @@ public class CFC_IFSul {
                     System.out.print("Digite o turno: ");
                     turno = read.next();
                     System.out.print("Digite o primeiro nome: ");
-                    first_name = read.next();
+                    first_name = read.nextLine();
                     System.out.print("Digite o ultimo nome: ");
-                    last_name = read.next();
+                    last_name = read.nextLine();
                     System.out.print("Digite o cpf: ");
                     cpf = read.next();
                     System.out.print("Digite a idade: ");
                     idade = read.nextInt();
                     Atendente atendente = new Atendente(turno, first_name, last_name, cpf, idade);
                     VectorEmployee.add(atendente);
-                }else if (opcao == 2){
-                    
+                }else if (opcao == 2){                  
                     String first_name = "";
                     String last_name = "";
                     String cpf = "";
@@ -120,9 +119,9 @@ public class CFC_IFSul {
                     String placa = "";
                     
                     System.out.print("Digite o primeiro nome: ");
-                    first_name = read.next();
+                    first_name = read.nextLine();
                     System.out.print("Digite o ultimo nome: ");
-                    last_name = read.next();
+                    last_name = read.nextLine();
                     System.out.print("Digite o cpf: ");
                     cpf = read.next();
                     System.out.print("Digite a idade: ");
@@ -132,20 +131,14 @@ public class CFC_IFSul {
                     //int i = 0;
                     for (int i = 0; i < vectorAut.size(); i++){                    
                         String placa1vect = vectorAut.get(i).placa;
+                        Automovel car = vectorAut.get(i);
+                        car.imprimir();
                         if (placa1vect.equals(placa)){
-                            System.out.println("tem");
+                            Instrutor instrutor = new Instrutor(car, first_name, last_name, cpf, idade);
+                            VectorEmployee.add(instrutor);
                         }
                     }
-                    //System.out.println(vectorAut.contains(placa));
-//                    Iterator value = vectorAut.iterator();
-//                    while (value.hasNext()){
-//                        
-//                        
-//                        //Instrutor intrutor = new Instrutor(value, first_name, last_name, cpf, idade);
-//                    }
-                    
                 }
-//                    vectorAut.add(onibus);
             }else if (opcao == 4){
                 for (Pessoa vector: VectorEmployee){
                     vector.imprimir();

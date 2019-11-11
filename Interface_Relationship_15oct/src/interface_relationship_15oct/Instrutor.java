@@ -17,7 +17,7 @@ public class Instrutor extends Pessoa {
     }
     
     public Instrutor(Automovel aut, String first_name, String last_name, String cpf, int idade){
-        this.id = randon.nextInt();
+        this.id = randon.nextInt(100);
         this.aut = aut;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -32,7 +32,7 @@ public class Instrutor extends Pessoa {
         System.out.println(" ");
         super.imprimir();
         System.out.println("ID: " + id);
-        System.out.println("Modelo carro" + aut.modelo);
+        System.out.println("Modelo carro: " + aut.modelo);
         System.out.println(" ");
     }
     

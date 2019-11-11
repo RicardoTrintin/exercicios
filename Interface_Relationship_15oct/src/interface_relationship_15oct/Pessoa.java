@@ -17,8 +17,7 @@ public abstract class Pessoa {
     
     
     public void imprimir () {
-        System.out.println("Primeiro nome: " + this.first_name);
-        System.out.println("Ultimo nome: " + this.last_name);
+        System.out.println("Nome: " + this.first_name + " " + this.last_name);
         System.out.println("CPF: " + this.cpf);
         System.out.println("Idade: " + this.idade);
     }
