@@ -132,7 +132,6 @@ public class CFC_IFSul {
                     for (int i = 0; i < vectorAut.size(); i++){                    
                         String placa1vect = vectorAut.get(i).placa;
                         Automovel car = vectorAut.get(i);
-                        car.imprimir();
                         if (placa1vect.equals(placa)){
                             Instrutor instrutor = new Instrutor(car, first_name, last_name, cpf, idade);
                             VectorEmployee.add(instrutor);
