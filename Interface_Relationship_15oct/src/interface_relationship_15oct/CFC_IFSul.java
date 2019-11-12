@@ -144,8 +144,26 @@ public class CFC_IFSul {
                     vector.imprimir();
                 }
             }else if (opcao == 5){
+                char categoria = ' ';
+                String first_name = "";
+                String last_name = "";
+                String cpf = "";
+                int idade = 0;           
+                
                 System.out.println("#### CADASTRO DE ALUNO ####");
-                System.out.println(" ");
+                System.out.println(" ");    
+                System.out.print("Digite o primeiro nome: ");
+                first_name = read.nextLine();
+                System.out.print("Digite o ultimo nome: ");
+                last_name = read.nextLine();
+                System.out.print("Digite o cpf: ");
+                cpf = read.next();
+                System.out.print("Digite a idade: ");
+                idade = read.nextInt();
+                System.out.println("Digite a categoria deste aluno: ");
+                categoria = read.next().charAt(0);
+                Aluno aluno = new Aluno(categoria, first_name, last_name, cpf, idade);
+                VectorStudent.add(aluno);
             }else if (opcao == 6){
                 for (Pessoa vector: VectorStudent){
                     vector.imprimir();

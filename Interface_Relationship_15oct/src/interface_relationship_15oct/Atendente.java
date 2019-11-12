@@ -23,7 +23,7 @@ public class Atendente extends Pessoa{
     
     @Override
     public void imprimir (){
-        System.out.println("Instrutor");
+        System.out.println("Atendente");
         System.out.println(" ");
         super.imprimir();
         System.out.println("Turno: " + turno);

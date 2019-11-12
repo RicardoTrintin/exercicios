@@ -24,7 +24,7 @@ public class Aluno extends Pessoa{
     
     @Override
     public void imprimir (){
-        System.out.println("Instrutor");
+        System.out.println("Aluno");
         System.out.println(" ");
         super.imprimir();
         System.out.println("Categoria Habilitação: " + categoriaHabilitacao);
