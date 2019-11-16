@@ -1,10 +1,6 @@
 package interface_relationship_15oct;
 import java.util.Random;
 
-/**
- *
- * @author joaojrmachado
- */
 public class Instrutor extends Pessoa {
     private int id;
     private Automovel aut;

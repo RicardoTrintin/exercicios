@@ -1,19 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package interface_relationship_15oct;
 
-/**
- *
- * @author joaojrmachado
- */
 public class Atendente extends Pessoa{
     private String turno;
+    private Endereco end; 
 
     
-    public Atendente(String turno, String first_name, String last_name, String cpf, int idade){
+    public Atendente(Endereco end, String turno, String first_name, String last_name, String cpf, int idade){
+        this.end = end;
         this.turno = turno;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -29,6 +22,13 @@ public class Atendente extends Pessoa{
         System.out.println("Turno: " + turno);
     }
     
+    public Endereco getEnd() {
+        return end;
+    }
+
+    public void setEnd(Endereco end) {
+        this.end = end;
+    }
     
     public String getTurno() {
         return turno;

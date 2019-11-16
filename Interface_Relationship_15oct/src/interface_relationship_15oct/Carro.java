@@ -1,30 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package interface_relationship_15oct;
 
-/**
- *
- * @author joaojrmachado
- */
-public class Carro extends Automovel{
-    private int numPortas;
+import java.util.Scanner;
+import java.util.Vector;
 
-    public Carro(){
+public class Carro extends Automovel {
+
+    private int numPortas;
+    Scanner read = new Scanner(System.in);
+    Vector<Automovel> vectorAut = new Vector();
+    
+    public Carro() {
         this.numPortas = 0;
     }
-    
-    public Carro(String cor, String placa, int numPortas, String modelo){
+
+    public Carro(String cor, String placa, int numPortas, String modelo) {
         this.cor = cor;
         this.placa = placa;
         this.modelo = modelo;
         this.numPortas = numPortas;
     }
-    
+
     @Override
-    public void imprimir (){
+    public void imprimir() {
         System.out.println(" ");
         System.out.println("CARRO");
         System.out.println(" ");
@@ -32,7 +29,20 @@ public class Carro extends Automovel{
         System.out.println("Numero de portas: " + numPortas);
         System.out.println(" ");
     }
-    
+
+    public void inserir() {
+        System.out.print("Digite a cor: ");
+        String cor = read.next();
+        System.out.print("Digite a placa: ");
+        String placa = read.next();
+        System.out.print("Digite o modelo: ");
+        String modelo = read.next();
+        System.out.print("Digite o numero de portas: ");
+        int numPortas = read.nextInt();
+        Carro carro = new Carro(cor, placa, numPortas, modelo);
+        vectorAut.add(carro);
+    }
+
     public int getNumPortas() {
         return numPortas;
     }
@@ -64,6 +74,5 @@ public class Carro extends Automovel{
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-    
-    
+
 }
