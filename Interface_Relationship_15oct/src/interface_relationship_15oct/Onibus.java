@@ -30,15 +30,10 @@ public class Onibus extends Automovel {
     }
 
     public Onibus inserir() {
-        System.out.print("Digite a cor: ");
-        String cor = read.next();
-        System.out.print("Digite a placa: ");
-        String placa = read.next();
-        System.out.print("Digite o modelo: ");
-        String modelo = read.next();
+        Automovel dados = super.inserir();
         System.out.print("Digite o numero de lugares: ");
         int numLugares = read.nextInt();
-        Onibus onibus = new Onibus(cor, placa, numLugares, modelo);
+        Onibus onibus = new Onibus(dados.cor, dados.placa, numLugares, dados.modelo);
         
         return onibus;
     }

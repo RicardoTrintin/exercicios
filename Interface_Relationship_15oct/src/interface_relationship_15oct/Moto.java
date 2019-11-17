@@ -30,15 +30,10 @@ public class Moto extends Automovel {
     }
 
     public Moto inserir() {
-        System.out.print("Digite a cor: ");
-        String cor = read.next();
-        System.out.print("Digite a placa: ");
-        String placa = read.next();
-        System.out.print("Digite o modelo: ");
-        String modelo = read.next();
+        Automovel dados = super.inserir();
         System.out.print("Digite o numero de cilindradas: ");
         int cilindradas = read.nextInt();
-        Moto moto = new Moto(cor, placa, cilindradas, modelo);
+        Moto moto = new Moto(dados.cor, dados.placa, cilindradas, dados.modelo);
         
         return moto;
     }

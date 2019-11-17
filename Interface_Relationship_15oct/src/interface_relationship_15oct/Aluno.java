@@ -33,28 +33,13 @@ public class Aluno extends Pessoa {
     public Aluno inserir() {
         System.out.println("#### CADASTRO DE ALUNO ####");
         System.out.println(" ");
-        System.out.print("Digite o primeiro nome: ");
-        String first_name = read.nextLine();
-        System.out.print("Digite o ultimo nome: ");
-        String last_name = read.nextLine();
-        System.out.print("Digite o cpf: ");
-        String cpf = read.next();
-        System.out.print("Digite a idade: ");
-        int idade = read.nextInt();
-        end = super.inserir();
+        
+        Endereco end = super.inserir();
         System.out.println("Digite a categoria deste aluno: ");
         char categoria = read.next().charAt(0);
         Aluno aluno = new Aluno(end, categoria, first_name, last_name, cpf, idade);
 
         return aluno;
-    }
-
-    public Scanner getRead() {
-        return read;
-    }
-
-    public void setRead(Scanner read) {
-        this.read = read;
     }
 
     public Endereco getEnd() {

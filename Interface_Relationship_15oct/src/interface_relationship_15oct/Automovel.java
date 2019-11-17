@@ -1,17 +1,31 @@
 package interface_relationship_15oct;
+import java.util.Scanner;
 
 public class Automovel implements Tipo {
-    
+
     protected String placa;
     protected String cor;
     protected String modelo;
-    
-    public void imprimir () {
+    Scanner read = new Scanner(System.in);
+
+    public Automovel inserir() {
+        System.out.print("Digite a cor: ");
+        String cor = read.next();
+        System.out.print("Digite a placa: ");
+        String placa = read.next();
+        System.out.print("Digite o modelo: ");
+        String modelo = read.next();
+        Automovel auto = new Automovel(placa, cor, modelo);
+        
+        return auto;
+    }
+
+    public void imprimir() {
         System.out.println("Placa: " + this.placa);
         System.out.println("Cor: " + this.cor);
         System.out.println("Modelo: " + this.modelo);
     }
-    
+
     protected Instrutor inst;
 
     public String getPlaca() {
@@ -47,22 +61,22 @@ public class Automovel implements Tipo {
     }
 
     @Override
-    public int numPneus(){
+    public int numPneus() {
         return 1;
     }
-    
+
     @Override
-    public int numCavalos(){
+    public int numCavalos() {
         return 1;
     }
-    
+
     //construtor vazio
-    public Automovel(){
+    public Automovel() {
         this("", "", "");
     }
-    
+
     //construtor default
-    public Automovel(String placa, String cor, String modelo){
+    public Automovel(String placa, String cor, String modelo) {
         this.placa = placa;
         this.cor = cor;
         this.modelo = modelo;

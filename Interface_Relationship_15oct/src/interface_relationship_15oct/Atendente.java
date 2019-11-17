@@ -7,12 +7,14 @@ public class Atendente extends Pessoa {
     private String turno;
     Vector<Pessoa> VectorEmployee = new Vector();
     Scanner read = new Scanner(System.in);
+    private Endereco end;
 
     public Atendente() {
         this.turno = null;
     }
 
     public Atendente(Endereco end, String turno, String first_name, String last_name, String cpf, int idade) {
+        this.end = end;
         this.turno = turno;
         this.first_name = first_name;
         this.last_name = last_name;

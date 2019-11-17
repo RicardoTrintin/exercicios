@@ -1,5 +1,4 @@
 package interface_relationship_15oct;
-
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -30,16 +29,12 @@ public class Carro extends Automovel {
         System.out.println(" ");
     }
 
+    @Override
     public Carro inserir() {
-        System.out.print("Digite a cor: ");
-        String cor = read.next();
-        System.out.print("Digite a placa: ");
-        String placa = read.next();
-        System.out.print("Digite o modelo: ");
-        String modelo = read.next();
+        Automovel dados = super.inserir();
         System.out.print("Digite o numero de portas: ");
         int numPortas = read.nextInt();
-        Carro carro = new Carro(cor, placa, numPortas, modelo);
+        Carro carro = new Carro(dados.cor, dados.placa, numPortas, dados.modelo);
         
         return carro;
     }
