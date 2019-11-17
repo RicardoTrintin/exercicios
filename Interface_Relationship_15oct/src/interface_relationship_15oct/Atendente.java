@@ -1,35 +1,54 @@
 package interface_relationship_15oct;
+import java.util.Scanner;
+import java.util.Vector;
 
-public class Atendente extends Pessoa{
+public class Atendente extends Pessoa {
+
     private String turno;
-    private Endereco end; 
+    Vector<Pessoa> VectorEmployee = new Vector();
+    Scanner read = new Scanner(System.in);
 
-    
-    public Atendente(Endereco end, String turno, String first_name, String last_name, String cpf, int idade){
-        this.end = end;
+    public Atendente() {
+        this.turno = null;
+    }
+
+    public Atendente(Endereco end, String turno, String first_name, String last_name, String cpf, int idade) {
         this.turno = turno;
         this.first_name = first_name;
         this.last_name = last_name;
         this.cpf = cpf;
         this.idade = idade;
     }
-    
+
     @Override
-    public void imprimir (){
+    public void imprimir() {
         System.out.println("Atendente");
         System.out.println(" ");
         super.imprimir();
         System.out.println("Turno: " + turno);
     }
     
-    public Endereco getEnd() {
-        return end;
+    @Override
+    public Atendente inserir(){
+        System.out.println("## CADASTRO DE ATENDENTE ##");
+        System.out.println(" ");
+        System.out.print("Digite o turno: ");
+        String turno = read.next();
+        System.out.print("Digite o primeiro nome: ");
+        String first_name = read.nextLine();
+        System.out.print("Digite o ultimo nome: ");
+        String last_name = read.nextLine();
+        System.out.print("Digite o cpf: ");
+        String cpf = read.next();
+        System.out.print("Digite a idade: ");
+        int idade = read.nextInt();
+        read.nextLine();
+        Endereco end = super.inserir();
+        Atendente atendente = new Atendente(end, turno, first_name, last_name, cpf, idade);
+        
+        return atendente;
     }
 
-    public void setEnd(Endereco end) {
-        this.end = end;
-    }
-    
     public String getTurno() {
         return turno;
     }
@@ -69,5 +88,5 @@ public class Atendente extends Pessoa{
     public void setIdade(int idade) {
         this.idade = idade;
     }
-    
+
 }

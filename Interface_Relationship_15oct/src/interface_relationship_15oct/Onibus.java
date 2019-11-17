@@ -1,24 +1,48 @@
 package interface_relationship_15oct;
 
-public class Onibus extends Automovel{
-    private int numLugares;
+import java.util.Scanner;
+import java.util.Vector;
 
-    public Onibus(String cor, String placa, int numLugares, String modelo){
+public class Onibus extends Automovel {
+
+    private int numLugares;
+    Scanner read = new Scanner(System.in);
+    Vector<Automovel> vectorAut = new Vector();
+
+    public Onibus() {
+        this.numLugares = 0;
+    }
+    
+    public Onibus(String cor, String placa, int numLugares, String modelo) {
         this.cor = cor;
         this.placa = placa;
         this.modelo = modelo;
         this.numLugares = numLugares;
     }
-    
+
     @Override
-    public void imprimir (){
+    public void imprimir() {
         System.out.println("ONIBUS");
         System.out.println(" ");
         super.imprimir();
         System.out.println("Numero de lugares: " + numLugares);
         System.out.println(" ");
     }
-    
+
+    public Onibus inserir() {
+        System.out.print("Digite a cor: ");
+        String cor = read.next();
+        System.out.print("Digite a placa: ");
+        String placa = read.next();
+        System.out.print("Digite o modelo: ");
+        String modelo = read.next();
+        System.out.print("Digite o numero de lugares: ");
+        int numLugares = read.nextInt();
+        Onibus onibus = new Onibus(cor, placa, numLugares, modelo);
+        
+        return onibus;
+    }
+
     public int getNumLugares() {
         return numLugares;
     }

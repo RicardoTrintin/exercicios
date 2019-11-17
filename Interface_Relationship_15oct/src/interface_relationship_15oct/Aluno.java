@@ -1,27 +1,70 @@
 package interface_relationship_15oct;
 
-public class Aluno extends Pessoa{
-    private char categoriaHabilitacao;
+import java.util.Scanner;
 
-    
-    public Aluno(char categoriaHabilitacao, String first_name, String last_name, String cpf, int idade){
+public class Aluno extends Pessoa {
+
+    private char categoriaHabilitacao;
+    Scanner read = new Scanner(System.in);
+    private Endereco end;
+
+    public Aluno() {
+        this.categoriaHabilitacao = ' ';
+    }
+
+    public Aluno(Endereco end, char categoriaHabilitacao, String first_name, String last_name, String cpf, int idade) {
+        this.end = end;
         this.categoriaHabilitacao = categoriaHabilitacao;
         this.first_name = first_name;
         this.last_name = last_name;
         this.cpf = cpf;
         this.idade = idade;
     }
-    
-    
+
     @Override
-    public void imprimir (){
+    public void imprimir() {
         System.out.println("Aluno");
         System.out.println(" ");
         super.imprimir();
         System.out.println("Categoria Habilitação: " + categoriaHabilitacao);
     }
-    
-    
+
+    @Override
+    public Aluno inserir() {
+        System.out.println("#### CADASTRO DE ALUNO ####");
+        System.out.println(" ");
+        System.out.print("Digite o primeiro nome: ");
+        String first_name = read.nextLine();
+        System.out.print("Digite o ultimo nome: ");
+        String last_name = read.nextLine();
+        System.out.print("Digite o cpf: ");
+        String cpf = read.next();
+        System.out.print("Digite a idade: ");
+        int idade = read.nextInt();
+        end = super.inserir();
+        System.out.println("Digite a categoria deste aluno: ");
+        char categoria = read.next().charAt(0);
+        Aluno aluno = new Aluno(end, categoria, first_name, last_name, cpf, idade);
+
+        return aluno;
+    }
+
+    public Scanner getRead() {
+        return read;
+    }
+
+    public void setRead(Scanner read) {
+        this.read = read;
+    }
+
+    public Endereco getEnd() {
+        return end;
+    }
+
+    public void setEnd(Endereco end) {
+        this.end = end;
+    }
+
     public char getCategoriaHabilitacao() {
         return categoriaHabilitacao;
     }
@@ -61,6 +104,5 @@ public class Aluno extends Pessoa{
     public void setIdade(int idade) {
         this.idade = idade;
     }
-    
-    
+
 }

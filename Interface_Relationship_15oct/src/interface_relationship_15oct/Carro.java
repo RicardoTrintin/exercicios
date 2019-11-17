@@ -30,7 +30,7 @@ public class Carro extends Automovel {
         System.out.println(" ");
     }
 
-    public void inserir() {
+    public Carro inserir() {
         System.out.print("Digite a cor: ");
         String cor = read.next();
         System.out.print("Digite a placa: ");
@@ -40,7 +40,8 @@ public class Carro extends Automovel {
         System.out.print("Digite o numero de portas: ");
         int numPortas = read.nextInt();
         Carro carro = new Carro(cor, placa, numPortas, modelo);
-        vectorAut.add(carro);
+        
+        return carro;
     }
 
     public int getNumPortas() {

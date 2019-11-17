@@ -22,6 +22,28 @@ public class Endereco {
         this.cidade = "";
         this.estado = "";
     }
+    
+        public void imprimir (){
+        System.out.println("Cidade: " + this.cidade);
+        System.out.println("Rua: " + this.rua);
+        System.out.println("Estado: " + this.estado);
+    }
+    
+    public Endereco inserir() {
+        Scanner read = new Scanner(System.in);
+        System.out.print("Rua: ");
+        String rua = read.nextLine();
+        System.out.print("Numero: ");
+        int numero = read.nextInt();
+        read.nextLine();
+        System.out.print("Cidade: ");
+        String cidade = read.nextLine();
+        System.out.print("Estado: ");
+        String estado = read.nextLine();
+        Endereco end = new Endereco(rua, numero, cidade, estado);
+        
+        return end;
+    }
 
     public String getRua() {
         return rua;
@@ -54,33 +76,4 @@ public class Endereco {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-
-    @Override
-    public String toString() {
-        return ("Rua: " + this.getRua() + " numero: " + this.getNumero() + " cidade: " + this.getCidade());
-
-    }
-
-    public void imprimir (){
-        System.out.println(" ");
-        System.out.println("Cidade: " + this.cidade);
-        System.out.println("Rua: " + this.rua);
-        System.out.println("Estado: " + this.estado);
-    }
-    
-    public Endereco inserir() {
-        Scanner read = new Scanner(System.in);
-        System.out.println("rua: ");
-        String rua = read.next();
-        System.out.println("numero: ");
-        int numero = read.nextInt();
-        System.out.println("cidade: ");
-        String cidade = read.next();
-        System.out.println("estado: ");
-        String estado = read.next();
-        Endereco end = new Endereco(rua, numero, cidade, estado);
-        
-        return end;
-    }
-
 }
