@@ -23,7 +23,7 @@ public class Endereco {
         this.estado = "";
     }
     
-        public void imprimir (){
+    public void imprimir (){
         System.out.println("Cidade: " + this.cidade);
         System.out.println("Rua: " + this.rua);
         System.out.println("Estado: " + this.estado);
@@ -32,17 +32,16 @@ public class Endereco {
     public Endereco inserir() {
         Scanner read = new Scanner(System.in);
         System.out.print("Rua: ");
-        String rua = read.nextLine();
+        this.rua = read.nextLine();
         System.out.print("Numero: ");
-        int numero = read.nextInt();
+        this.numero = read.nextInt();
         read.nextLine();
         System.out.print("Cidade: ");
-        String cidade = read.nextLine();
+        this.cidade = read.nextLine();
         System.out.print("Estado: ");
-        String estado = read.nextLine();
-        Endereco end = new Endereco(rua, numero, cidade, estado);
+        this.estado = read.nextLine();
         
-        return end;
+        return this;
     }
 
     public String getRua() {

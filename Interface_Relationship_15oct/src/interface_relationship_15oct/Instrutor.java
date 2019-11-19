@@ -38,21 +38,21 @@ public class Instrutor extends Pessoa {
         System.out.println("## CADASTRO DE INTRUTOR ##");
         System.out.println(" ");
         System.out.print("Digite o primeiro nome: ");
-        String first_name = read.nextLine();
+        this.first_name = read.nextLine();
         System.out.print("Digite o ultimo nome: ");
-        String last_name = read.nextLine();
+        this.last_name = read.nextLine();
         System.out.print("Digite o cpf: ");
-        String cpf = read.next();
+        this.cpf = read.next();
         System.out.print("Digite a idade: ");
-        int idade = read.nextInt();
-        end = super.inserir();
+        this.idade = read.nextInt();
+        this.end = super.inserir();
         System.out.println("Digite a placa do carro para este instrutor: ");
-        String placa = read.next();
+        this.aut.placa = read.next();
         for (int i = 0; i < vectorAut.size(); i++) {
             Automovel car = vectorAut.get(i);
-            if (car.placa.equals(placa)) {
-                Instrutor instrutor = new Instrutor(end, car, first_name, last_name, cpf, idade);
-                return instrutor;
+            if (car.placa.equals(this.aut.placa)) {
+                //Instrutor instrutor = new Instrutor(end, car, first_name, last_name, cpf, idade);
+                return this;
             }
         }
         return null;
@@ -60,6 +60,7 @@ public class Instrutor extends Pessoa {
 
     @Override
     public void imprimir() {
+        System.out.println(" ");
         System.out.println("Instrutor");
         System.out.println(" ");
         super.imprimir();

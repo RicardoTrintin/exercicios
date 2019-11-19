@@ -24,6 +24,7 @@ public class Atendente extends Pessoa {
 
     @Override
     public void imprimir() {
+        System.out.println(" ");
         System.out.println("Atendente");
         System.out.println(" ");
         super.imprimir();
@@ -35,20 +36,19 @@ public class Atendente extends Pessoa {
         System.out.println("## CADASTRO DE ATENDENTE ##");
         System.out.println(" ");
         System.out.print("Digite o turno: ");
-        String turno = read.next();
+        this.turno = read.nextLine();
         System.out.print("Digite o primeiro nome: ");
-        String first_name = read.nextLine();
+        this.first_name = read.nextLine();
         System.out.print("Digite o ultimo nome: ");
-        String last_name = read.nextLine();
+        this.last_name = read.nextLine();
         System.out.print("Digite o cpf: ");
-        String cpf = read.next();
+        this.cpf = read.next();
         System.out.print("Digite a idade: ");
-        int idade = read.nextInt();
+        this.idade = read.nextInt();
         read.nextLine();
-        Endereco end = super.inserir();
-        Atendente atendente = new Atendente(end, turno, first_name, last_name, cpf, idade);
+        this.end = super.inserir();
         
-        return atendente;
+        return this;
     }
 
     public String getTurno() {

@@ -1,5 +1,4 @@
 package interface_relationship_15oct;
-
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -80,6 +79,7 @@ public class CFC_IFSul {
             } else if (opcao == 4) {
                 for (Pessoa vector : VectorEmployee) {
                     vector.imprimir();
+                    System.out.println(" ");
                 }
             } else if (opcao == 5) {
                 Aluno aluno = new Aluno();
