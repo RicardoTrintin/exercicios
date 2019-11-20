@@ -9,8 +9,6 @@ public class Instrutor extends Pessoa {
     private int id;
     private Automovel aut;
     Random randon = new Random();
-    Vector<Pessoa> VectorEmployee = new Vector();
-    Vector<Automovel> vectorAut = new Vector();
     private Endereco end;
     Scanner read = new Scanner(System.in);
 
@@ -33,8 +31,7 @@ public class Instrutor extends Pessoa {
         this.idade = idade;
     }
 
-    @Override
-    public Instrutor inserir() {
+    public Instrutor inserir(Vector<Automovel> vectorAut) {
         System.out.println("## CADASTRO DE INTRUTOR ##");
         System.out.println(" ");
         System.out.print("Digite o primeiro nome: ");
@@ -47,11 +44,10 @@ public class Instrutor extends Pessoa {
         this.idade = read.nextInt();
         this.end = super.inserir();
         System.out.println("Digite a placa do carro para este instrutor: ");
-        this.aut.placa = read.next();
+        String placa = read.next();
         for (int i = 0; i < vectorAut.size(); i++) {
-            Automovel car = vectorAut.get(i);
-            if (car.placa.equals(this.aut.placa)) {
-                //Instrutor instrutor = new Instrutor(end, car, first_name, last_name, cpf, idade);
+            if(vectorAut.get(i).getPlaca().equals(placa)){
+                this.aut = vectorAut.get(i);
                 return this;
             }
         }
@@ -64,8 +60,8 @@ public class Instrutor extends Pessoa {
         System.out.println("Instrutor");
         System.out.println(" ");
         super.imprimir();
-        System.out.println("ID: " + id);
-        System.out.println("Modelo do automovel: " + aut.modelo);
+        System.out.println("ID: " + this.id);
+        System.out.println("Modelo do automovel: " + this.aut.modelo);
         System.out.println(" ");
     }
 

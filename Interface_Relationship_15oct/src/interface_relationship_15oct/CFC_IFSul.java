@@ -68,11 +68,11 @@ public class CFC_IFSul {
                     VectorEmployee.add(atendente);
                 } else if (opcao == 2) {
                     Instrutor instrutor = new Instrutor();
-                    instrutor = instrutor.inserir();
+                    instrutor = instrutor.inserir(vectorAut);
                     if (instrutor != null) {
                         VectorEmployee.add(instrutor);
                     } else {
-                        System.out.println("Placa nao encontrada!");
+                        System.out.println("Placa nao encontrada, instrutor nao criado!");
                         System.out.println(" ");
                     }
                 }

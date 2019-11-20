@@ -7,6 +7,7 @@ public abstract class Pessoa extends Endereco{
     protected int idade;
     
     
+    @Override
     public void imprimir () {
         System.out.println("Nome: " + this.first_name + " " + this.last_name);
         System.out.println("CPF: " + this.cpf);
